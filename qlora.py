@@ -201,3 +201,6 @@ model_to_merge = PeftModel.from_pretrained(AutoModelForCausalLM.from_pretrained(
 
 merged_model = model_to_merge.merge_and_unload()
 merged_model.save_pretrained(merged_model)
+## pushing to repo
+merged_model.push_to_hub("repo_id")
+tokenizer.push_to_hub("repo_id")
